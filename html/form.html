@@ -8,11 +8,11 @@
 <body>
     <h1>HTML Forms</h1>
     <a href="basics-tags.html">Basic Tags</a>
-    <form>
+    <form action="">
         <table border="1" cellspacing="5">
             <tr>
                 <td><label>Name:</label></td>
-                <td><input type="text" placeholder="please enter your name"></td>
+                <td><input type="text" placeholder="please enter your name" pattern="[a-zA-Z?-']"></td>
             </tr>
             <tr>
                 <td><label>Password:</label></td>
@@ -52,12 +52,13 @@
                 <td>Message</td>
                 <td>
                     <textarea rows="4"></textarea>
+                    <input type="range">
                 </td>
             </tr>
             <tr>
                 <td>Image</td>
                 <td>
-                    <input type="file">
+                    <input type="file" name="profile_picture">
                 </td>
             </tr>
             <tr>
