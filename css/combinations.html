@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        div p{background: yellow; display:inline-block} /* Decendent selector */
+        div > p{background: yellow;} /* Child selector */
+        div + p{background: yellow;} /* Adjcent Sibling selector */
+        div ~ p{background: yellow;} /* General Sibling selector */
+        .red{border:5px solid red; padding: 20px; margin:20px 0 20px 0;}
+        .red:hover{background: lightcyan;}
+        p:first-child{}
+    </style>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <div>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <span>
+            <p>Paragraph 4</p>
+        </span>
+    </div>
+    <p class="red">Pargarph 5</p>
+    <p>Pargarph 6</p>
+    <div style="background: yellow; display:inline">
+        Text
+    </div>
+    
+</body>
+</html>
