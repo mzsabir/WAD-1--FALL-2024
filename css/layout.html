@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding:0}
+        #root{width:1000px; height: 600px; background: yellow; margin:0 auto}
+        header{background: greenyellow; max-height: 100px; overflow:hidden;}
+        main{display: flex; flex-direction: row; gap:10px; justify-content:space-evenly;}
+        #sec1{background:blue; width:25%;}
+        #sec2{background: lightpink; width:25%; height: 100px;}
+       
+    </style>
+</head>
+<body>
+    <div id="root">
+        <header>
+            <h1>PakWheels</h1>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+            <p>Buy and Purchase wheels on Pakwheels</p>
+
+        </header>
+        <main>
+            <section id="sec1">
+                A
+            </section>
+            <section id="sec2">
+                B
+            </section>
+            <section id="sec2" style="position:relative; top:30px; left:50px; background: #336699;">
+                C
+            </section>
+            <section id="sec2" style="z-index: 1;">
+                z-index is layering order
+            </section>
+            <section id="sec2" style="position: relative;">
+                <p>Absolute Example</p>
+                <div style="background:grey; position:absolute; top:20px">Child 1</div>                
+            </section>
+
+        </main>
+      
+        
+        <p>paragraph</p>
+    </div>
+    
+</body>
+</html>
