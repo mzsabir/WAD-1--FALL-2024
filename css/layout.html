@@ -8,8 +8,16 @@
         * {margin: 0; padding:0}
         #root{width:1000px; height: 600px; background: yellow; margin:0 auto}
         header{background: greenyellow; max-height: 100px; overflow:hidden;}
-        main{display: flex; flex-direction: row; gap:10px; justify-content:space-evenly;}
-        #sec1{background:blue; width:25%;}
+
+        @media only screen and (min-width: 600px) {
+            main{display: flex; flex-direction: row; gap:10px; justify-content:space-evenly;}
+        }
+        @media only screen and (max-width: 600px) {
+            main{justify-content: center; padding:20px gap:10px; justify-content:space-evenly;}
+        }
+
+        
+        #sec1{background:rgb(77, 77, 198); width:25%;}
         #sec2{background: lightpink; width:25%; height: 100px;}
        
     </style>
@@ -22,11 +30,6 @@
             <p>Buy and Purchase wheels on Pakwheels</p>
             <p>Buy and Purchase wheels on Pakwheels</p>
             <p>Buy and Purchase wheels on Pakwheels</p>
-            <p>Buy and Purchase wheels on Pakwheels</p>
-            <p>Buy and Purchase wheels on Pakwheels</p>
-            <p>Buy and Purchase wheels on Pakwheels</p>
-            <p>Buy and Purchase wheels on Pakwheels</p>
-
         </header>
         <main>
             <section id="sec1">
@@ -35,7 +38,7 @@
             <section id="sec2">
                 B
             </section>
-            <section id="sec2" style="position:relative; top:30px; left:50px; background: #336699;">
+            <section id="sec2" style="background: #336699;">
                 C
             </section>
             <section id="sec2" style="z-index: 1;">
