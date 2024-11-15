@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var x=$(this).html();
+                $("div").after("<p>Parag"+x+"</p>");
+                var y=$("#abc").attr("title");
+                $("#msg").val(y);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    <p id="abc" title="Jquery">This paragraph test</p>
+    <div style="background: lightgreen;">
+        <p>Para 1</p>
+        <p>Para 1</p>
+        <p>Para 1</p>
+        <p>Para 1</p>
+    </div>
+
+    <input type="text" id="msg">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+</body>
+</html>

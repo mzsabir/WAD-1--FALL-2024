@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function menter(){
+            document.getElementById("output").innerHTML="Text field in foucus";
+            document.getElementById("num").style.border="5px solid red";
+        }
+        function mblur(){
+            document.getElementById("output").innerHTML="Text field out of foucus";
+            document.getElementById("num").style.border="5px solid black";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num" onfocus="menter()" onblur="mblur()">
+    <button>Submit</button>
+    <div id="output">
+        Content
+    </div>
+</body>
+</html>

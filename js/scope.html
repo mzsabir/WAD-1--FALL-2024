@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x="Global X";
+        var y="Global Y";
+        dosomething();
+        function dosomething()
+        {
+            x="Global X Modified";
+            var y="Local Y";
+            z="Global Z";
+             
+              document.write("Value of x = "+x+ "<br />");
+            document.write("Value of y = "+y+ "<br />");
+            document.write("Value of z = "+z+ "<br />");
+    
+            document.write("---------------------------------------<br />");
+    
+            y="Modified Y";
+            document.write("Value of Local y = "+y+ "<br />");
+            document.write("Value of Global y = "+this.y+ "<br />");  
+            // Can also use window.y
+            document.write("---------------------------------------<br />");
+        }
+    
+    </script>
+    
+</body>
+</html>
