@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX JSON Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    $(document).ready(function () {
+      // AJAX call to a API
+      const url = "https://jsonplaceholder.typicode.com/users/1"; // Replace with your URL
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+          // Dynamically create HTML from JSON response
+          const output = `
+            <h3>User Details</h3>
+            <p><strong>ID:</strong> ${data.id}</p>
+            <p><strong>Name:</strong> ${data.name}</p>
+            <p><strong>Username:</strong> ${data.username}</p>
+            <p><strong>Email:</strong> ${data.email}</p>
+            <p><strong>Address:</strong> ${data.address.street}, ${data.address.suite}, ${data.address.city}, ${data.address.zipcode}</p>
+            <p><strong>Geo:</strong> Lat: ${data.address.geo.lat}, Lng: ${data.address.geo.lng}</p>
+            <p><strong>Phone:</strong> ${data.phone}</p>
+            <p><strong>Website:</strong> <a href="http://${data.website}" target="_blank">${data.website}</a></p>
+            <p><strong>Company:</strong> ${data.company.name}</p>
+            <p><strong>Catch Phrase:</strong> ${data.company.catchPhrase}</p>
+            <p><strong>BS:</strong> ${data.company.bs}</p>
+          `;
+          // Append the output to the div
+          $('#output').html(output);
+        },
+        error: function (xhr, status, error) {
+          console.error("Error fetching data:", error);
+          $('#output').html("<p>An error occurred while fetching data.</p>");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
