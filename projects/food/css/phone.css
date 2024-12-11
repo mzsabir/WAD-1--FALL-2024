@@ -1,0 +1,85 @@
+/*Navigation*/
+#navbar{
+    flex-direction: column;
+}
+
+#logo {
+    margin: 0px 10px;
+}
+
+
+#logo img {
+    height: 33px;
+    margin: 5px 5px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+#navbar ul li a{
+    font-size: 0.8rem;
+    padding: 0px 7px;
+    padding-bottom: 1px;
+}
+
+/*Home*/
+#home{
+    height: 280px;
+    padding: 3px 60px;
+    
+}
+
+#home h1{
+    margin-top: 80px;
+    
+}
+
+#home::before{
+    height: 312px;
+    
+}
+
+#home p{
+    font-size: 10px;
+}
+
+/*For Welcome To Food Harmony*/
+.h-primary{
+    font-size: 22px;
+    padding: 13px;
+
+}
+
+/*For Food Items Heading*/
+.h-primary{
+    font-size: 22px;
+    padding: 32px;
+
+}
+
+/*Services*/
+#services{
+    flex-direction: column;
+    align-items: center;
+}
+
+#services .box{
+    height: 265px;
+    width: 233px;
+    align-items: center;
+}
+
+#services .box p {
+    font-family: "Bree Serif", serif;
+    font-size: 0.6rem;
+}
+
+.h-secondary {
+    font-size: 1.1rem;
+    padding: 15px;
+}    
+
+.btn{
+    font-size: 10px;
+    padding: 2px 5px
+}

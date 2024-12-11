@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#center{
+    text-align: center;
+    font-size: 2rem;
+    padding: 12px;
+    font-family: "Bree Serif", serif;
+    text-emphasis-color: black;
+    z-index: 1;
+}
+
+.h1 {
+    display: block;
+    font-size: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+#contact{
+    position:relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contact::before{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('bkgrnd2.jpg') no-repeat center center;
+    background-size: cover;
+    
+    z-index: -1;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    opacity: 1000%;
+}
+
+
+
+#contact-box input{
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    border-color: black;
+    background-color: lightblue;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+#contact-box textarea{
+    width: 265px;
+    padding: 0.4rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    border-color: black;
+    box-sizing: border-box;
+    background-color: lightblue;
+    border: 2px solid black;    
+    font-weight: bold;
+}
+
+
+
+#contact-box label{
+    font-size: 1rem;
+    font-family: "Bree Serif", serif;
+}
+
+.form-group ::placeholder{
+    font-size: 12px;
+    font-family: "Satisfy", cursive;
+    color:black;
+    
+    
+}
+
+.form-group{
+    width:250px ;
+}
+

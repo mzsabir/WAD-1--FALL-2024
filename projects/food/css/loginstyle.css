@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    background-image: url(loginimg41.jpg);
+    background-size: cover;
+    background-position: center
+}
+
+.form-container {
+    width: 350px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: black;
+    font-family: "Oleo Script Swash Caps", system-ui;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    font-family: "Bree Serif", serif;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 13px;
+    color: black;
+    font-family: "Satisfy", serif;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #58A18A;
+}
+
+.form-group ::placeholder{
+    font-size: 12px;
+    font-family: "Satisfy", cursive;
+    color:black;
+}
+
+.form-container .btn {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Orbitron", serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.form-container .btn-login {
+    background-color: #58A18A;
+    color: white;
+    text-decoration: none;
+}
+
+.form-container .btn-register {
+    background-color: #333;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;    
+    font-family: "Bree Serif", serif;
+}
+
+.form-container p a {
+    color: #58A18A;
+    text-decoration: none;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.form-container p a:hover {
+    text-decoration: underline;
+}
+
+.btn-con{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-decoration: none;
+}
+

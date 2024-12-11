@@ -1,70 +1,64 @@
 <?php
-$con=mysqli_connect("localhost","root","","food");
-/* Insert */
-if(isset($_POST['uname']))
-{
-    $uname=$_POST['uname'];
-    $r=mysqli_query($con,"INSERT INTO `users`(`name`, `email`, `password`, `city`) VALUES ('".$uname."','email@gmail.com','1234','Rawalpindi')");
-}
-/* edit */
-if(isset($_POST['edit_id']))
-{
-    $uname=$_POST['uname'];
-    $r=mysqli_query($con,"update `users` set name='".$uname."' where id=".$_POST['edit_id']);
-}
-/* Delete */
-if(isset($_GET['id']))
-{
-    $r=mysqli_query($con,"DELETE from users where id=".$_GET['id']);
-}
-
-
-
-$result=mysqli_query($con,"select * from users");
-$no=mysqli_num_rows($result);
-echo "Number of Rows: ".$no;
+session_start(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Food Ordering App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 970px)" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oleo+Script+Swash+Caps:wght@400;700&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h3>Data from MySQL Database</h3>
-    <form action="index.php" method="POST">
-        <lable>Name</lable>
-        <input type="text" name="uname">
-        <input type="submit" value="Add to Database">
-    </form>
-    <?php
-    if($no>0)
-    {
-        ?>
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>City</th>
-                <th>Actions</th>
-            </tr>
-        <?php
-        while($row=mysqli_fetch_array($result))
-        {
-            echo "<tr>";
-            echo "<td>".$row['name']."</td>";
-            echo "<td>".$row['email']."</td>";
-            echo "<td>".$row['city']."</td>";
-            echo "<td><a href='index.php?id=".$row['id']."'>Delete</a></td>";
-            echo "<td><a href='edit.php?id=".$row['id']."'>Edit</a></td>";
-            echo "</tr>";
-        }
-        ?>
-        </table>
-        <?php
-    }else
-        echo "<p>No User Exist in Database. </p>";
+    <?php include('includes/header.php');
+   
     ?>
+    <section id="home">
+        <h1 class="h-primary">Welcome To FoodHarmony </h1>
+        <?php 
+         if(isset($_GET['success']))
+         echo "<p style='color:green'>User has been Registered.</p>";
+        ?>
+        <p>Craving something delicious? At FoodHarmony, we bring the best local flavors directly to you!
+            Browse our extensive menu and enjoy a seamless ordering experience that transforms your meal times into
+            delightful moments</p>
+        <button class="btn">Order Now</button>
+    </section>
+    <section class="services-container"></section>
+    <h1 id="food-items" class="h-primary center">Food Items</h1>
+    <div id="services">
+        <div class="box">
+            <img src="images/pizza1.png" alt="Pizza">
+            <h2 class="h-secondary center">Delicious Pizzas</h2>
+            <p class="center">Indulge in our mouthwatering pizzas crafted
+                with the freshest ingredients, rich flavors, and love baked into every slice..</p>
+            <button class="bton">Order Now</button>
+        </div>
+        <div class="box">
+            <img src="images/sandwich.png" alt="sandwich">
+            <h2 class="h-secondary center">Loaded Sandwiches</h2>
+            <p class="center">Bite into our loaded sandwiches,
+                where each layer is packed with mouthwatering ingredients that satisfy every craving.</p>
+            <button class="bton">Order Now</button>
+        </div>
+        <div class="box">
+            <img src="images/burgor.png" alt="burgers">
+            <h2 class="h-secondary center">Cheese Burgers</h2>
+            <p class="center">Dive into our mouthwatering cheeseburgers,
+                loaded with cheese and juicy patties that create the ultimate indulgence in every bite.</p>
+            <button class="bton">Order Now</button>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
