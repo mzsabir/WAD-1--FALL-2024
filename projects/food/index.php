@@ -1,5 +1,7 @@
 <?php
 session_start(); 
+include("includes/connection.php");
+$result=mysqli_query($conn,"select * from foods");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,27 +37,18 @@ session_start();
     <section class="services-container"></section>
     <h1 id="food-items" class="h-primary center">Food Items</h1>
     <div id="services">
+        <?php
+        while($row=mysqli_fetch_array($result)):
+        ?>
         <div class="box">
-            <img src="images/pizza1.png" alt="Pizza">
-            <h2 class="h-secondary center">Delicious Pizzas</h2>
-            <p class="center">Indulge in our mouthwatering pizzas crafted
-                with the freshest ingredients, rich flavors, and love baked into every slice..</p>
+            <img src="images/<?php echo $row['picture'];?>" alt="Pizza">
+            <h2 class="h-secondary center"><?php echo $row['name'];?></h2>
+            <p class="center"><?php echo $row['price'];?></p>
             <button class="bton">Order Now</button>
+            <button class="bton">Delete</button>
         </div>
-        <div class="box">
-            <img src="images/sandwich.png" alt="sandwich">
-            <h2 class="h-secondary center">Loaded Sandwiches</h2>
-            <p class="center">Bite into our loaded sandwiches,
-                where each layer is packed with mouthwatering ingredients that satisfy every craving.</p>
-            <button class="bton">Order Now</button>
-        </div>
-        <div class="box">
-            <img src="images/burgor.png" alt="burgers">
-            <h2 class="h-secondary center">Cheese Burgers</h2>
-            <p class="center">Dive into our mouthwatering cheeseburgers,
-                loaded with cheese and juicy patties that create the ultimate indulgence in every bite.</p>
-            <button class="bton">Order Now</button>
-        </div>
+        <?php endwhile; ?>
+       
     </div>
 
 

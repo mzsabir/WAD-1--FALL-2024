@@ -12,6 +12,7 @@ if(isset($_POST['email']))
     {
         $user=mysqli_fetch_array($u);
         $_SESSION['username']=$user['name'];
+        $_SESSION['role']=$user['role'];
         header("location:index.php");
     }else
     {
